@@ -3,8 +3,20 @@ import Icon from "@/components/ui/icon";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-red-600 to-orange-500 text-white py-20 px-4">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="relative bg-gradient-to-br from-red-600 to-orange-500 text-white py-20 px-4 overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')",
+        }}
+      />
+
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40" />
+
+      <div className="max-w-6xl mx-auto text-center relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">Эвакуатор 24/7</h1>
         <p className="text-xl md:text-2xl mb-8 opacity-90">
           Быстрая подача • Круглосуточно • Легковые и грузовые авто
